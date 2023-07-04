@@ -37,7 +37,8 @@ document.getElementById('machineBottom').classList.add('animation');
   setOutputText(outputText[1]);
   setTimeout(() => {
    setOutputText(outputText[2]);
-    drinkIsReady = true;
+   drinkIsReady = true;
+   document.getElementById('machineBottom').classList.add('ready'); 
   }, 5500);
 }
 
