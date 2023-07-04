@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drink Machine</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Text&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="drinkMachine">
+      <h1>DRINK MACHINE</h1>
+      <form id="drinkMachineScreen">
+        <fieldset id="chooseSection">
+          <div class="choice">
+            <h6>Chose the size:</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="size"
+                id="size1"
+                value="small"
+                oninput="updateChoice()"
+              />
+              <label class="form-check-label" for="size1"> Small </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="size"
+                id="size2"
+                value="medium"
+                oninput="updateChoice()"
+              />
+              <label class="form-check-label" for="size2"> Medium </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="size"
+                id="size3"
+                value="large"
+                oninput="updateChoice()"
+              />
+              <label class="form-check-label" for="size3"> Large </label>
+            </div>
+          </div>
+          <div class="choice">
+            <h6>Chose the drink:</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="drink"
+                id="drink1"
+                value="Coca-Cola"
+                oninput="updateChoice()"
+              />
+              <label class="form-check-label" for="drink1"> Cola </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="drink"
+                id="drink2"
+                value="Lemonade"
+                oninput="updateChoice()"
+              />
+              <label class="form-check-label" for="drink2"> Lemon </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="drink"
+                id="drink3"
+                value="Orangeade"
+                oninput="updateChoice()"
+              />
+              <label class="form-check-label" for="drink3"> Orange </label>
+            </div>
+          </div>
+          <output
+            name="outputScreen"
+            for="size1 size2 size3 drink1 drink2 drink3"
+            id="outputScreen"
+          ></output>
+          <input type="reset" value="Clear selection" class="button" />
+          <input type="submit" value="Make a drink" class="button" />
+        </fieldset>
+      </form>
+      <div id="machineBottom" class="">
+        <div id="jet"></div>
+        <div id="spout"></div>
+        <div id="glass">
+          <div id="drink" class=""></div>
+          <div class="glass-highlight">
+            <div class="facet"></div>
+            <div class="facet"></div>
+            <div class="facet"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
