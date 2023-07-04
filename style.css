@@ -92,14 +92,18 @@ input.button {
   height: calc(100% - 5px);
   opacity: 0.5;
 }
+#glass, #glass * {
+  bottom: 0;
+}
 #glass {
   border-width: 2px 1px 5px 1px;
   border-style: solid;
   border-color: rgba(40, 83, 108, 0.5);
+  top: 0;
+  left: 0;
+  right: 0;
  }
-#glass, #glass * {
-  bottom: 0;
-}
+
 #drink {
   width: 100%;
 }

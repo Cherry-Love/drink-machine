@@ -75,13 +75,17 @@ document.getElementById('machineBottom').classList.add('animation');
     setOutputText(outputText[0]);  
     drinkIsReady = false;
   }
+
+
    
 // Submit function
 document.getElementById('drinkMachineScreen').addEventListener('submit', function(event) {
-    // Don't send form
+  // Don't send form
     event.preventDefault();
+   if (drinkSize  && drinkType) {    
     // call my function
     makeDrinkAnimation();
+   }
   });
 
 //reset machine when glass has been "taken" (click)
